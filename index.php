@@ -6,7 +6,7 @@
         <h1>Tanatporn Ratsamisuriya Ploy</h1>
         <p></p>
         <img src="meow1.jpg" width="300" height="430">
-        <img src="meow2.jpg" width="250" height="250">
+        <img src="https://www.meme-arsenal.com/memes/e2c972d540384a9fe582a694913fbd17.jpg" width="250" height="250">
         <a href="https://www.youtube.com">This is a Link</a>
         <h2>เรื่องตลก</h2>
         <p>ณ โรงพยาบาลแห่งหนึ่ง
