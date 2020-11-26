@@ -22,16 +22,11 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-<div class="container">
-  <h2>Dark Striped Table</h2>
-  <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>
-  <table class="table table-dark table-striped">
-    <thead>
-        <tr>
-            <td><?php echo $Result['Name'];?></div></td>
-            <td><?php echo $Result['Comment'];?></td>
-            <td><?php echo $Result['Link'];?></td>
-        </tr>
+  <tr>
+    <td><?php echo $Result['Name'];?></div></td>
+    <td><?php echo $Result['Comment'];?></td>
+    <td><?php echo $Result['Link'];?></td>
+  </tr>
 <?php
 }
 ?>
