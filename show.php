@@ -27,29 +27,30 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <div class="form">
         <p class="ex1"><h1><center>DATA</center></h1></p>
     </div>
-  <table width="600" border="1" class="table table-success" class="center" class="ex1">
-    <tr class="table-success">
-      <th width="200"> <div align="center">Name</div></th>
-      <th width="350"> <div align="center">Comment </div></th>
-      <th width="50"> <div align="center">Action</div></th>
-    </tr>
-  <?php
-  while($Result = mysqli_fetch_array($res))
-  {
-  ?>
-    <tr>
-      <td><center><?php echo $Result['Name'];?></center></td>
-      <td><center><?php echo $Result['Comment'];?></center></td>
-      <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-danger"></a></center></td>
-    </tr>
-  <?php
-  }
-  ?>
-  </table>
-  <center><a href="form insert.html"><input type="submit" value="INSERT" class="btn btn-primary"></a></center>
-  <?php
-  mysqli_close($conn);
-  ?>
-</div>
-</body>
-</html>
+  <table width="600" border="1" class="table" class="center" class="ex1">
+    <thead class="thead-dark">
+      <tr class="table-success">
+        <th width="200"> <div align="center">Name</div></th>
+        <th width="350"> <div align="center">Comment </div></th>
+        <th width="50"> <div align="center">Action</div></th>
+      </tr>
+    <?php
+    while($Result = mysqli_fetch_array($res))
+    {
+    ?>
+      <tr>
+        <td><center><?php echo $Result['Name'];?></center></td>
+        <td><center><?php echo $Result['Comment'];?></center></td>
+        <td><center><a href="form edit.html"><input type="submit" value="EDIT" class="btn btn-warning"></a>&nbsp;&nbsp;<a href="form delete.html"><input type="submit" value="DELETE"  class="btn btn-danger"></a></center></td>
+      </tr>
+    <?php
+    }
+    ?>
+    </table>
+    <center><a href="form insert.html"><input type="submit" value="INSERT" class="btn btn-primary"></a></center>
+    <?php
+    mysqli_close($conn);
+    ?>
+  </div>
+  </body>
+  </html>
