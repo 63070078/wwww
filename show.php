@@ -12,22 +12,24 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Comment</th>
-        <th scope="col">Link</th>
-    </tr>
-   <?php
+<table class="table table-dark table-striped" width="600" border="1">
+  <tr>
+    <th width="100"> <div align="center">Name</div></th>
+    <th width="350"> <div align="center">Comment </div></th>
+    <th width="150"> <div align="center">Link </div></th>
+  </tr>
+<?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
-  <tr>
-    <td><?php echo $Result['Name'];?></div></td>
-    <td><?php echo $Result['Comment'];?></td>
-    <td><?php echo $Result['Link'];?></td>
-  </tr>
+<div class="container">
+  <h2>Dark Striped Table</h2>
+  <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>  
+    <tr>
+        <td><?php echo $Result['Name'];?></div></td>
+        <td><?php echo $Result['Comment'];?></td>
+        <td><?php echo $Result['Link'];?></td>
+    </tr>
 <?php
 }
 ?>
