@@ -16,7 +16,7 @@ $sql = "DELETE FROM guestbook WHERE Comment='$comment'";
 
 if (mysqli_query($conn, $sql)) {
     echo "Delete successfully";
-    echo '<a href="https://tanat.azurewebsites.net/show.php"> click here to open first page </a>';
+    echo '<a href="https://tanat.azurewebsites.net/show.php"> click here to open first page  </a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
